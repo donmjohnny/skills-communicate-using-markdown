@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Coffee House - Shopping Cart</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #F8F5F2;
+            }
+
+            .font-lora {
+                font-family: 'Lora', serif;
+            }
+
+            .nav-link {
+                transition: color 0.3s ease;
+            }
+
+            .nav-link:hover {
+                color: #8B5E3C;
+            }
+
+            .active-link {
+                color: #8B5E3C;
+                font-weight: 600;
+            }
+
+            .quantity-input::-webkit-outer-spin-button,
+            .quantity-input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            .quantity-input[type=number] {
+                -moz-appearance: textfield;
+            }
+        </style>
+    </head>
+
+    <body class="text-gray-800">
+
+        <!-- Header & Navigation -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-lora font-bold text-[#4B2D1E]">The Coffee House</a>
+                <div class="hidden md:flex items-center space-x-8 text-lg">
+                    <a href="Home Page.html" class="nav-link">Home</a>
+                    <a href="Menu Page.html" class="nav-link">Menu</a>
+                    <a href="Orders Page.html" class="nav-link">My Orders</a>
+                    <a href="Shopping Cart.html" class="nav-link active-link">Cart</a>
+                    <a href="Customer Page.html"
+                        class="bg-[#4B2D1E] text-white px-4 py-2 rounded-full hover:bg-[#6a4028] transition-colors">Sign
+                        In</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Cart Section -->
+        <main class="container mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-lora text-[#4B2D1E]">Your Shopping Cart</h1>
+                <p class="text-lg mt-2 text-gray-600">Review your items before checkout.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <!-- Cart Items -->
+                <div id="cart-items" class="space-y-6">
+                    <!-- Cart Item -->
+                    <div class="cart-item flex items-center justify-between border-b pb-4" data-price="3.50">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/100x100/d1c7bd/4B2D1E?text=Cappuccino" alt="Cappuccino"
+                                class="w-20 h-20 rounded-md object-cover">
+                            <div>
+                                <h3 class="font-lora font-semibold">Cappuccino</h3>
+                                <p class="text-gray-500 item-price">$3.50</p>
+                                <button class="text-red-500 hover:text-red-700 text-sm mt-1 remove-btn">Remove</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button class="border rounded-md px-2 py-1 quantity-btn" data-action="decrement">-</button>
+                            <input type="number" value="1"
+                                class="w-12 text-center border-gray-300 rounded-md quantity-input">
+                            <button class="border rounded-md px-2 py-1 quantity-btn" data-action="increment">+</button>
+                        </div>
+                        <div class="font-semibold item-total">$3.50</div>
+                    </div>
+                    <!-- Cart Item -->
+                    <div class="cart-item flex items-center justify-between border-b pb-4" data-price="8.00">
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/100x100/d1c7bd/4B2D1E?text=Classic+Burger"
+                                alt="Classic Burger" class="w-20 h-20 rounded-md object-cover">
+                            <div>
+                                <h3 class="font-lora font-semibold">Classic Cheese Burger</h3>
+                                <p class="text-gray-500 item-price">$8.00</p>
+                                <button class="text-red-500 hover:text-red-700 text-sm mt-1 remove-btn">Remove</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button class="border rounded-md px-2 py-1 quantity-btn" data-action="decrement">-</button>
+                            <input type="number" value="1"
+                                class="w-12 text-center border-gray-300 rounded-md quantity-input">
+                            <button class="border rounded-md px-2 py-1 quantity-btn" data-action="increment">+</button>
+                        </div>
+                        <div class="font-semibold item-total">$8.00</div>
+                    </div>
+                </div>
+
+                <!-- Empty Cart Message -->
+                <div id="empty-cart-message" class="hidden text-center py-8">
+                    <p class="text-gray-500 text-lg">Your cart is empty.</p>
+                    <a href="menu.html"
+                        class="mt-4 inline-block bg-[#8B5E3C] text-white py-2 px-6 rounded-full hover:bg-[#6a4028] transition-colors">Continue
+                        Shopping</a>
+                </div>
+
+                <!-- Cart Summary -->
+                <div id="cart-summary" class="mt-8">
+                    <div class="flex justify-end space-x-4 text-lg">
+                        <span class="font-semibold">Subtotal:</span>
+                        <span id="subtotal" class="font-bold text-[#4B2D1E]">$11.50</span>
+                    </div>
+                    <p class="text-right text-gray-500 text-sm mt-2">Taxes and shipping calculated at checkout.</p>
+                    <div class="flex justify-end mt-6">
+                        <a href="Payment Page.html"
+                            class="bg-[#4B2D1E] text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-[#6a4028] transition-colors">
+                            Proceed to Checkout
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-[#3E2723] text-white py-8 mt-16">
+            <div class="container mx-auto px-6 text-center">
+                <p>&copy; 2025 The Coffee House. All Rights Reserved.</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="#" class="hover:text-[#8B5E3C] transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-[#8B5E3C] transition-colors">LinkedIn</a>
+                    <a href="#" class="hover:text-[#8B5E3C] transition-colors">GitHub</a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const cartItemsContainer = document.getElementById('cart-items');
+
+                const updateSubtotal = () => {
+                    let total = 0;
+                    const cartItems = document.querySelectorAll('.cart-item');
+
+                    if (cartItems.length === 0) {
+                        document.getElementById('cart-summary').classList.add('hidden');
+                        document.getElementById('empty-cart-message').classList.remove('hidden');
+                    } else {
+                        document.getElementById('cart-summary').classList.remove('hidden');
+                        document.getElementById('empty-cart-message').classList.add('hidden');
+                    }
+
+                    cartItems.forEach(item => {
+                        const price = parseFloat(item.dataset.price);
+                        const quantity = parseInt(item.querySelector('.quantity-input').value);
+                        const itemTotal = price * quantity;
+                        item.querySelector('.item-total').textContent = `$${itemTotal.toFixed(2)}`;
+                        total += itemTotal;
+                    });
+
+                    document.getElementById('subtotal').textContent = `$${total.toFixed(2)}`;
+                };
+
+                cartItemsContainer.addEventListener('click', (event) => {
+                    const target = event.target;
+
+                    // Handle remove button clicks
+                    if (target.classList.contains('remove-btn')) {
+                        const cartItem = target.closest('.cart-item');
+                        cartItem.remove();
+                        updateSubtotal();
+                    }
+
+                    // Handle quantity button clicks
+                    if (target.classList.contains('quantity-btn')) {
+                        const action = target.dataset.action;
+                        const cartItem = target.closest('.cart-item');
+                        const quantityInput = cartItem.querySelector('.quantity-input');
+                        let quantity = parseInt(quantityInput.value);
+
+                        if (action === 'increment') {
+                            quantity++;
+                        } else if (action === 'decrement' && quantity > 1) {
+                            quantity--;
+                        }
+
+                        quantityInput.value = quantity;
+                        updateSubtotal();
+                    }
+                });
+
+                // Initial calculation
+                updateSubtotal();
+            });
+        </script>
+    </body>
+
+</html>

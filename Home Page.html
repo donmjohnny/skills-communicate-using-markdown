@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Coffee House - Home</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+            rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #F8F5F2;
+            }
+
+            .font-lora {
+                font-family: 'Lora', serif;
+            }
+
+            .hero-bg {
+                /* A real, high-quality background image */
+                background-image: url('https://images.unsplash.com/photo-1559925393-8be0ec4767c8?q=80&w=2070&auto=format&fit=crop');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .nav-link {
+                transition: color 0.3s ease;
+            }
+
+            .nav-link:hover {
+                color: #8B5E3C;
+            }
+
+            .active-link {
+                color: #8B5E3C;
+                font-weight: 600;
+            }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            /* New Carousel Styles */
+            .testimonial-carousel .carousel-item {
+                min-width: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .testimonial-carousel {
+                overflow: hidden;
+            }
+
+            .carousel-inner {
+                display: flex;
+            }
+        </style>
+    </head>
+
+    <body class="text-gray-800">
+
+        <!-- Header & Navigation -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="Home Page.html" class="text-2xl font-lora font-bold text-[#4B2D1E]">The Coffee House</a>
+                <div class="hidden md:flex items-center space-x-8 text-lg">
+                    <a href="Home Page.html" class="nav-link active-link">Home</a>
+                    <a href="Menu Page.html" class="nav-link">Menu</a>
+                    <a href="Orders Page.html" class="nav-link">My Orders</a>
+                    <a href="Shopping Cart.html" class="nav-link">Cart</a>
+                    <a href="Customer Page.html"
+                        class="bg-[#4B2D1E] text-white px-4 py-2 rounded-full hover:bg-[#6a4028] transition-colors">Sign
+                        In</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="relative hero-bg h-[95vh]">
+                <div class="absolute inset-0 bg-black/60"></div>
+                <div class="relative h-full flex items-center justify-center text-white">
+                    <div class="text-center px-4">
+                        <h1 class="text-5xl md:text-7xl font-lora mb-4 leading-tight">Discover the Art<br>of Perfect
+                            Coffee</h1>
+                        <p class="text-xl mb-8 max-w-2xl mx-auto">Experience the finest blends, expertly crafted to
+                            awaken your senses and elevate your day.</p>
+                        <div class="space-x-4">
+                            <a href="Menu Page.html"
+                                class="bg-[#8B5E3C] text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-80 transition-transform transform hover:scale-105 inline-block">Order
+                                Now &rarr;</a>
+                            <a href="#features"
+                                class="bg-white text-[#8B5E3C] py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-transform transform hover:scale-105 inline-block">Explore
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section id="features" class="py-20 bg-white">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-4xl font-lora mb-4 text-[#4B2D1E]">Why You'll Love Us</h2>
+                    <p class="text-lg max-w-3xl mx-auto mb-12 text-gray-600">We're more than just coffee. We're a place
+                        to connect, relax, and savor the moment.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                        <!-- Feature Card -->
+                        <div class="p-8 rounded-lg shadow-lg transition-transform feature-card">
+                            <div
+                                class="bg-[#8B5E3C] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 3a1 1 0 00-.866.502l-2.667 4.5a1 1 0 00.866 1.498h5.334a1 1 0 00.866-1.498l-2.667-4.5A1 1 0 0010 3zm-3.082 6.5a1 1 0 00-1.732 0l-2.667 4.5A1 1 0 003.385 15h5.23a1 1 0 00.866-1.5l-2.667-4.5zm8.931-.001a1 1 0 00-1.732 0l-2.667 4.5a1 1 0 00.866 1.5h5.23a1 1 0 00.866-1.5l-2.667-4.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-lora font-semibold mb-2">Premium Beans</h3>
+                            <p class="text-gray-600">Sourced from the best coffee-growing regions around the world for a
+                                rich, aromatic experience.</p>
+                        </div>
+                        <!-- Feature Card -->
+                        <div class="p-8 rounded-lg shadow-lg transition-transform feature-card">
+                            <div
+                                class="bg-[#8B5E3C] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path
+                                        d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-lora font-semibold mb-2">Cozy Ambiance</h3>
+                            <p class="text-gray-600">Our welcoming space is the perfect spot to unwind, work, or catch
+                                up with friends.</p>
+                        </div>
+                        <!-- Feature Card -->
+                        <div class="p-8 rounded-lg shadow-lg transition-transform feature-card">
+                            <div
+                                class="bg-[#8B5E3C] text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5 2a1 1 0 011 1v1h1V3a1 1 0 112 0v1h2V3a1 1 0 112 0v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0V5H9v1a1 1 0 11-2 0V5H6a1 1 0 01-1-1V3a1 1 0 011-1zm1 5a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm0 3a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm0 3a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-lora font-semibold mb-2">Delicious Food</h3>
+                            <p class="text-gray-600">From freshly baked pastries to savory sandwiches, find the perfect
+                                pairing for your coffee.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Testimonial Carousel Section -->
+            <section id="testimonials" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-4xl font-lora text-center mb-12 text-[#4B2D1E]">What Our Customers Say</h2>
+                    <div class="testimonial-carousel relative max-w-3xl mx-auto">
+                        <div class="carousel-inner">
+                            <!-- Testimonial 1 -->
+                            <div class="carousel-item">
+                                <div class="text-center p-8">
+                                    <img src="https://placehold.co/100x100/3E2723/FFFFFF?text=A" alt="Customer Avatar"
+                                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+                                    <p class="text-lg italic text-gray-600 max-w-2xl mx-auto">"The best coffee I've had
+                                        in a long time! The ambiance is so cozy and welcoming. It's my new favorite spot
+                                        to get work done."</p>
+                                    <h4 class="font-lora font-semibold text-xl mt-4 text-[#4B2D1E]">- Alex Johnson</h4>
+                                </div>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="carousel-item">
+                                <div class="text-center p-8">
+                                    <img src="https://placehold.co/100x100/6a4028/FFFFFF?text=S" alt="Customer Avatar"
+                                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+                                    <p class="text-lg italic text-gray-600 max-w-2xl mx-auto">"A true gem! The baristas
+                                        are incredibly friendly and skilled. You can taste the quality and passion in
+                                        every cup."</p>
+                                    <h4 class="font-lora font-semibold text-xl mt-4 text-[#4B2D1E]">- Sarah Lee</h4>
+                                </div>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="carousel-item">
+                                <div class="text-center p-8">
+                                    <img src="https://placehold.co/100x100/8B5E3C/FFFFFF?text=M" alt="Customer Avatar"
+                                        class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white shadow-lg">
+                                    <p class="text-lg italic text-gray-600 max-w-2xl mx-auto">"From the latte art to the
+                                        delicious pastries, everything is top-notch. I highly recommend the classic
+                                        cheese burger!"</p>
+                                    <h4 class="font-lora font-semibold text-xl mt-4 text-[#4B2D1E]">- Michael Chen</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <button
+                            class="carousel-control-prev absolute top-1/2 left-0 transform -translate-y-1/2 text-[#4B2D1E] hover:text-[#8B5E3C] p-2 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button
+                            class="carousel-control-next absolute top-1/2 right-0 transform -translate-y-1/2 text-[#4B2D1E] hover:text-[#8B5E3C] p-2 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-[#3E2723] text-white py-8">
+            <div class="container mx-auto px-6 text-center">
+                <p>&copy; 2025 The Coffee House. All Rights Reserved.</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="#" class="hover:text-[#8B5E3C] transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-[#8B5E3C] transition-colors">LinkedIn</a>
+                    <a href="#" class="hover:text-[#8B5E3C] transition-colors">GitHub</a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const setupCarousel = (carouselSelector) => {
+                    const carousel = document.querySelector(carouselSelector);
+                    if (!carousel) return;
+
+                    const carouselInner = carousel.querySelector('.carousel-inner');
+                    const items = carousel.querySelectorAll('.carousel-item');
+                    const prevButton = carousel.querySelector('.carousel-control-prev');
+                    const nextButton = carousel.querySelector('.carousel-control-next');
+                    let currentIndex = 0;
+
+                    const updateCarousel = () => {
+                        const offset = -currentIndex * 100;
+                        carouselInner.style.transform = `translateX(${offset}%)`;
+                    };
+
+                    prevButton.addEventListener('click', () => {
+                        currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                        updateCarousel();
+                    });
+
+                    nextButton.addEventListener('click', () => {
+                        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                        updateCarousel();
+                    });
+
+                    // Auto-play feature
+                    setInterval(() => {
+                        nextButton.click();
+                    }, 5000);
+                };
+
+                setupCarousel('.testimonial-carousel');
+            });
+        </script>
+    </body>
+
+</html>
